@@ -6,5 +6,6 @@ from odoo import fields, models
 
 class MrpWorkOrder(models.Model):
     _inherit = "mrp.workorder"
+    _order = 'production_id desc,sequence'
 
     sequence = fields.Integer()
